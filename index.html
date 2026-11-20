@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -166,6 +167,7 @@ footer{text-align:center;padding:25px;color:#7e8794;border-top:1px solid #292e37
 const form=document.getElementById('carForm');
 const steps=[...document.querySelectorAll('.step')];
 let current=0;
+
 function showStep(){
  steps.forEach((s,i)=>s.classList.toggle('active',i===current));
  document.getElementById('bar').style.width=((current+1)/3*100)+'%';
@@ -173,6 +175,7 @@ function showStep(){
  document.getElementById('next').style.display=current===2?'none':'block';
  document.getElementById('submit').style.display=current===2?'block':'none';
 }
+
 document.getElementById('next').onclick=()=>{
  const fields=[...steps[current].querySelectorAll('input,select,textarea')];
  for(const field of fields){
@@ -181,7 +184,11 @@ document.getElementById('next').onclick=()=>{
  current++;
  showStep();
 };
-document.getElementById('prev').onclick=()=>{current--;showStep();};
+
+document.getElementById('prev').onclick=()=>{
+ current--;
+ showStep();
+};
 
 form.onsubmit=async(e)=>{
  e.preventDefault();
@@ -215,6 +222,11 @@ form.onsubmit=async(e)=>{
 
   if(!response.ok || !result.success){
    throw new Error('Ошибка отправки');
+  }
+
+  // Фиксируем успешную заявку в Яндекс Метрике
+  if (typeof ym === 'function') {
+   ym(114397144, 'reachGoal', 'lead_sent');
   }
 
   document.getElementById('formContent').style.display='none';
