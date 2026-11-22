@@ -1,301 +1,771 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
- <!-- Yandex.Metrika counter -->
-<script type="text/javascript">
-    (function(m,e,t,r,i,k,a){
-        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-        m[i].l=1*new Date();
-        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
-        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
-    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=114397144', 'ym');
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Автовыкуп 24/7 — Срочный выкуп автомобилей</title>
+  <meta name="description" content="Срочный выкуп автомобилей. Оставьте заявку и получите предложение по вашему автомобилю. Работаем 24/7.">
 
-    ym(114397144, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
-</script>
-<noscript><div><img src="https://mc.yandex.ru/watch/114397144" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-<!-- /Yandex.Metrika counter -->
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AutoВыкуп — Срочный выкуп автомобилей</title>
-<meta name="description" content="Срочный выкуп автомобилей. Оставьте заявку и получите оценку вашего автомобиля.">
-<style>
-*{box-sizing:border-box}
-body{margin:0;background:#101318;color:#fff;font-family:Arial,sans-serif}
-header{padding:22px 7%;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #292e37}
-.logo{font-size:25px;font-weight:800}.logo span{color:#ff653b}
-header a{color:#fff;text-decoration:none}
-.hero{padding:65px 7% 35px;max-width:1000px;margin:auto}
-.tag{color:#ff653b;font-weight:bold;font-size:13px}
-h1{font-size:clamp(36px,7vw,62px);line-height:1.05;margin:18px 0}
-h1 span{color:#ff653b}
-.hero p{color:#aeb5c0;font-size:17px;line-height:1.6}
-.features{display:flex;gap:20px;flex-wrap:wrap;margin-top:28px;color:#d9dee7;font-size:14px}
-main{max-width:700px;margin:20px auto 70px;padding:0 18px}
-.panel{background:#1a1f27;border:1px solid #303743;border-radius:18px;padding:25px}
-.panel h2{margin-top:0;font-size:25px}
-.progress{height:5px;background:#353c48;border-radius:5px;margin:20px 0 28px}
-.progress div{height:100%;width:33.33%;background:#ff653b;border-radius:5px;transition:.2s}
-.step{display:none}.step.active{display:block}
-label{display:block;font-size:14px;color:#cbd1dc;margin:17px 0 8px}
-input,select,textarea{width:100%;padding:15px;border-radius:10px;border:1px solid #414957;background:#11161d;color:white;font-size:16px;outline:none}
-input:focus,select:focus,textarea:focus{border-color:#ff653b}
-textarea{min-height:90px;resize:vertical}
-.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-button{border:0;border-radius:10px;padding:16px 22px;background:#ff653b;color:white;font-weight:bold;font-size:16px;cursor:pointer}
-button:hover{background:#e9512b}
-.buttons{display:flex;gap:12px;margin-top:25px}
-.buttons button{flex:1}
-.back{background:#363e49}
-.small{font-size:12px;color:#929ba9;line-height:1.5}
-.success{display:none;text-align:center;padding:30px 5px}
-.success h2{color:#65d69b}
-footer{text-align:center;padding:25px;color:#7e8794;border-top:1px solid #292e37;font-size:13px}
-@media(max-width:520px){.grid{grid-template-columns:1fr}.hero{padding-top:42px}.panel{padding:19px}.buttons{flex-direction:column}}
-</style>
+  <!-- Яндекс Метрика -->
+  <script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+      m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+      m[i].l=1*new Date();
+      for (var j = 0; j < document.scripts.length; j++) {
+        if (document.scripts[j].src === r) return;
+      }
+      k=e.createElement(t),a=e.getElementsByTagName(t)[0],
+      k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=114397144','ym');
+
+    ym(114397144,'init',{
+      clickmap:true,
+      trackLinks:true,
+      accurateTrackBounce:true,
+      webvisor:true
+    });
+  </script>
+  <noscript>
+    <div><img src="https://mc.yandex.ru/watch/114397144"
+      style="position:absolute; left:-9999px;" alt=""></div>
+  </noscript>
+
+  <style>
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #101114;
+      color: #fff;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 22px 7%;
+      border-bottom: 1px solid #292a2e;
+      background: #151619;
+    }
+
+    .logo {
+      font-size: 23px;
+      font-weight: 800;
+      letter-spacing: .5px;
+    }
+
+    .logo span { color: #ff653b; }
+
+    .header-right {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      font-size: 14px;
+    }
+
+    .work-time {
+      color: #ff653b;
+      font-weight: bold;
+    }
+
+    .phone {
+      font-weight: bold;
+    }
+
+    .hero {
+      max-width: 1100px;
+      margin: auto;
+      padding: 65px 20px 35px;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: clamp(30px, 5vw, 48px);
+      line-height: 1.15;
+      margin: 0 0 18px;
+    }
+
+    .hero h1 span { color: #ff653b; }
+
+    .hero p {
+      color: #aaa;
+      font-size: 17px;
+      line-height: 1.6;
+      margin: 0 auto;
+      max-width: 650px;
+    }
+
+    .benefits {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 28px;
+    }
+
+    .benefit {
+      padding: 10px 15px;
+      background: #1d1e22;
+      border: 1px solid #303136;
+      border-radius: 8px;
+      color: #ddd;
+      font-size: 13px;
+    }
+
+    .form-wrap {
+      max-width: 680px;
+      margin: 20px auto 70px;
+      padding: 0 16px;
+    }
+
+    .form-card {
+      background: #191a1e;
+      border: 1px solid #303136;
+      border-radius: 16px;
+      padding: 30px;
+      box-shadow: 0 15px 50px rgba(0,0,0,.25);
+    }
+
+    .steps {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 28px;
+    }
+
+    .step-line {
+      height: 5px;
+      flex: 1;
+      border-radius: 10px;
+      background: #35363b;
+    }
+
+    .step-line.active { background: #ff653b; }
+
+    .step-title {
+      font-size: 23px;
+      margin: 0 0 8px;
+    }
+
+    .step-description {
+      color: #929399;
+      font-size: 14px;
+      margin: 0 0 25px;
+    }
+
+    .field { margin-bottom: 17px; }
+
+    label {
+      display: block;
+      font-size: 13px;
+      color: #c9c9cc;
+      margin-bottom: 8px;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 14px;
+      background: #24252a;
+      border: 1px solid #3a3b41;
+      border-radius: 8px;
+      color: #fff;
+      font-size: 15px;
+      outline: none;
+      font-family: inherit;
+    }
+
+    input:focus, select:focus, textarea:focus {
+      border-color: #ff653b;
+    }
+
+    input::placeholder, textarea::placeholder {
+      color: #77787e;
+    }
+
+    select option { background: #24252a; }
+
+    textarea {
+      min-height: 90px;
+      resize: vertical;
+    }
+
+    .two-columns {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 13px;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 12px;
+      margin-top: 25px;
+    }
+
+    button {
+      border: none;
+      cursor: pointer;
+      font-size: 15px;
+      font-weight: bold;
+      border-radius: 8px;
+      padding: 15px 20px;
+      font-family: inherit;
+    }
+
+    .btn-main {
+      background: #ff653b;
+      color: #fff;
+      width: 100%;
+      transition: .2s;
+    }
+
+    .btn-main:hover {
+      background: #ed542b;
+      transform: translateY(-1px);
+    }
+
+    .btn-main:disabled {
+      opacity: .6;
+      cursor: not-allowed;
+      transform: none;
+    }
+
+    .btn-back {
+      background: #303137;
+      color: #fff;
+      min-width: 110px;
+    }
+
+    .hidden { display: none !important; }
+
+    .photo-upload {
+      display: block;
+      padding: 20px;
+      text-align: center;
+      border: 1px dashed #666870;
+      border-radius: 10px;
+      background: #222329;
+      cursor: pointer;
+      color: #ddd;
+    }
+
+    .photo-upload span {
+      display: block;
+      color: #999ba2;
+      font-size: 12px;
+      margin-top: 7px;
+    }
+
+    .photo-upload input { display: none; }
+
+    .photo-list {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 9px;
+      margin-top: 13px;
+    }
+
+    .photo-item {
+      position: relative;
+      aspect-ratio: 1;
+      border-radius: 8px;
+      overflow: hidden;
+      background: #303137;
+    }
+
+    .photo-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .photo-remove {
+      position: absolute;
+      top: 4px;
+      right: 4px;
+      width: 24px;
+      height: 24px;
+      padding: 0;
+      border-radius: 50%;
+      background: rgba(0,0,0,.8);
+      color: white;
+      font-size: 16px;
+    }
+
+    .photo-note {
+      color: #999ba2;
+      font-size: 12px;
+      margin-top: 9px;
+    }
+
+    .consent {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+      color: #aaa;
+      font-size: 12px;
+      line-height: 1.5;
+      margin-top: 17px;
+    }
+
+    .consent input {
+      width: 17px;
+      height: 17px;
+      margin: 0;
+      flex-shrink: 0;
+      accent-color: #ff653b;
+    }
+
+    .success {
+      text-align: center;
+      padding: 35px 10px;
+    }
+
+    .success-icon {
+      font-size: 55px;
+      margin-bottom: 15px;
+    }
+
+    .success h2 {
+      font-size: 26px;
+      margin-bottom: 12px;
+    }
+
+    .success p {
+      color: #aaa;
+      line-height: 1.6;
+    }
+
+    .footer {
+      border-top: 1px solid #292a2e;
+      padding: 25px 15px;
+      text-align: center;
+      color: #77787e;
+      font-size: 13px;
+    }
+
+    .footer a { color: #ff653b; }
+
+    @media (max-width: 600px) {
+      .header {
+        padding: 18px 16px;
+      }
+
+      .logo { font-size: 19px; }
+
+      .header-right { gap: 10px; }
+
+      .phone { font-size: 12px; }
+
+      .work-time { font-size: 12px; }
+
+      .hero { padding: 45px 18px 25px; }
+
+      .hero p { font-size: 15px; }
+
+      .form-card { padding: 22px 17px; }
+
+      .two-columns { grid-template-columns: 1fr; gap: 0; }
+
+      .photo-list { grid-template-columns: repeat(3, 1fr); }
+
+      .buttons { flex-direction: column-reverse; }
+
+      .btn-back { width: 100%; }
+    }
+  </style>
 </head>
+
 <body>
-<header>
-<div class="logo">АВТО<span>ВЫКУП 24/7</span></div>
- <a href="#form">Оценить авто ↗</a>
+
+<header class="header">
+  <div class="logo">АВТО<span>ВЫКУП</span></div>
+  <div class="header-right">
+    <div class="work-time">24/7</div>
+    <a class="phone" href="tel:+79963215455">Позвонить</a>
+  </div>
 </header>
 
 <section class="hero">
- <div class="tag">БЫСТРО. ПРОСТО. БЕЗ ЛИШНИХ ПРОБЛЕМ.</div>
- <h1>Продайте автомобиль<br><span>быстро и выгодно</span></h1>
- <p>Оставьте заявку на оценку автомобиля. Рассмотрим ваш автомобиль и свяжемся с вами для обсуждения предложения.</p>
- <div class="features">
-  <span>✓ Любые марки</span>
-  <span>✓ Любое состояние</span>
-  <span>✓ Работаем по регионам</span>
- </div>
-</section>
+  <h1>Срочный выкуп <span>автомобилей</span></h1>
+  <p>
+    Выкупим ваш автомобиль быстро и без лишних хлопот.
+    Оставьте заявку, и мы свяжемся с вами для оценки автомобиля.
+  </p>
 
-<main id="form">
-<div class="panel">
- <div id="formContent">
-  <h2>Оценка автомобиля</h2>
-  <p class="small">Заполните информацию об автомобиле. Это займёт пару минут.</p>
-  <div class="progress"><div id="bar"></div></div>
-
-  <form id="carForm">
-   <div class="step active">
-    <div class="grid">
-     <div>
-      <label>Марка автомобиля *</label>
-      <input name="brand" placeholder="Например, Toyota" required>
-     </div>
-     <div>
-      <label>Модель *</label>
-      <input name="model" placeholder="Например, Camry" required>
-     </div>
-    </div>
-    <div class="grid">
-     <div>
-      <label>Год выпуска *</label>
-      <input name="year" type="number" min="1950" max="2026" placeholder="2018" required>
-     </div>
-     <div>
-      <label>Город *</label>
-      <input name="city" placeholder="Москва" required>
-     </div>
-    </div>
-    <label>Состояние автомобиля *</label>
-    <select name="condition" required>
-     <option value="">Выберите состояние</option>
-     <option>На ходу</option>
-     <option>Не на ходу</option>
-     <option>После ДТП</option>
-     <option>Требует ремонта</option>
-    </select>
-   </div>
-
-   <div class="step">
-    <div class="grid">
-     <div>
-      <label>Пробег, км *</label>
-      <input name="mileage" type="number" placeholder="145000" required>
-     </div>
-     <div>
-      <label>Желаемая цена, ₽</label>
-      <input name="price" type="number" placeholder="1800000">
-     </div>
-    </div>
-    <label>Есть кредит или залог?</label>
-    <select name="encumbrance">
-     <option>Нет</option>
-     <option>Кредит</option>
-     <option>Залог</option>
-     <option>Другое обременение</option>
-    </select>
-    <label>Комментарий</label>
-    <textarea name="comment" placeholder="Дополнительная информация об автомобиле"></textarea>
-    <label>Фотографии автомобиля</label>
-    <input name="photos" type="file" accept="image/*" multiple>
-    <p class="small">Фотографии необязательны, но помогут точнее оценить автомобиль.</p>
-   </div>
-
-   <div class="step">
-    <label>Ваше имя *</label>
-    <input name="name" placeholder="Как к вам обращаться" required>
-    <label>Номер телефона *</label>
-    <input name="phone" type="tel" placeholder="+7 999 123-45-67" required>
-    <p class="small">Нажимая кнопку отправки, вы соглашаетесь на обработку персональных данных согласно политике конфиденциальности.</p>
-    <label style="display:flex;gap:10px;align-items:flex-start">
-     <input type="checkbox" name="consent" required style="width:20px;margin:0">
-     <span>Согласен на обработку персональных данных *</span>
-    </label>
-   </div>
-
-   <div class="buttons">
-    <button type="button" class="back" id="prev" style="display:none">Назад</button>
-    <button type="button" id="next">Продолжить →</button>
-    <button type="submit" id="submit" style="display:none">Отправить заявку</button>
-   </div>
-  </form>
- </div>
- <div class="success" id="success">
-  <h2>Заявка заполнена!</h2>
-  <p>Это демонстрационная версия сайта. Реальная отправка заявки будет подключена следующим этапом.</p>
- </div>
-</div>
-</main>
-<footer>© 2026 AutoВыкуп. Информация на сайте не является публичной офертой.</footer>
-
-<script>
-const form=document.getElementById('carForm');
-const steps=[...document.querySelectorAll('.step')];
-let current=0;
-
-function showStep(){
- steps.forEach((s,i)=>s.classList.toggle('active',i===current));
- document.getElementById('bar').style.width=((current+1)/3*100)+'%';
- document.getElementById('prev').style.display=current===0?'none':'block';
- document.getElementById('next').style.display=current===2?'none':'block';
- document.getElementById('submit').style.display=current===2?'block':'none';
-}
-
-document.getElementById('next').onclick=()=>{
- const fields=[...steps[current].querySelectorAll('input,select,textarea')];
- for(const field of fields){
-  if(!field.checkValidity()){field.reportValidity();return;}
- }
- current++;
- showStep();
-};
-
-document.getElementById('prev').onclick=()=>{
- current--;
- showStep();
-};
-
-form.onsubmit=async(e)=>{
- e.preventDefault();
-
- const fields=[...steps[current].querySelectorAll('input,select,textarea')];
- for(const field of fields){
-  if(!field.checkValidity()){
-   field.reportValidity();
-   return;
-  }
- }
-
- const button=document.getElementById('submit');
- button.disabled=true;
- button.textContent='Отправляем...';
-
- try {
-  const data=Object.fromEntries(new FormData(form).entries());
-  delete data.photos;
-
-  const response=await fetch(
-   'https://autovykup-api.rch5s5j877.workers.dev',
-   {
-    method:'POST',
-    headers:{'Content-Type':'application/json'},
-    body:JSON.stringify(data)
-   }
-  );
-
-  const result=await response.json();
-
-  if(!response.ok || !result.success){
-   throw new Error('Ошибка отправки');
-  }
-
-  // Фиксируем успешную заявку в Яндекс Метрике
-  if (typeof ym === 'function') {
-   ym(114397144, 'reachGoal', 'lead_sent');
-  }
-
-  document.getElementById('formContent').style.display='none';
-  document.getElementById('success').style.display='block';
-  document.querySelector('#success p').textContent='Заявка успешно отправлена! Скоро мы свяжемся с вами.';
-  window.scrollTo({top:document.getElementById('form').offsetTop,behavior:'smooth'});
-
- } catch(error) {
-  alert('Не удалось отправить заявку. Попробуйте ещё раз.');
-  button.disabled=false;
-  button.textContent='Отправить заявку';
- }
-};
-
-</script>
-
-<style>
-.contact-panel {
-  padding: 28px 16px;
-  text-align: center;
-  background: #111827;
-  color: white;
-  border-radius: 18px;
-  margin: 30px 16px;
-}
-.contact-panel h2 {
-  margin-bottom: 10px;
-}
-.contact-panel p {
-  color: #cbd5e1;
-}
-.contact-buttons {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 12px;
-  margin-top: 20px;
-}
-.contact-buttons a {
-  display: inline-block;
-  padding: 14px 22px;
-  border-radius: 10px;
-  text-decoration: none;
-  font-weight: 700;
-}
-.contact-call {
-  background: #16a34a;
-  color: white;
-}
-.contact-telegram {
-  background: #229ed9;
-  color: white;
-}
-</style>
-
-<section class="contact-panel">
-  <h2>Свяжитесь с нами</h2>
-  <p>Ответим на вопросы и поможем оценить ваш автомобиль</p>
-
-  <div class="contact-buttons">
-    <a class="contact-call" href="tel:+79963215455">
-      📞 Позвонить
-    </a>
-
-    <a class="contact-telegram"
-       href="https://t.me/dippi111"
-       target="_blank"
-       rel="noopener">
-      ✈️ Написать в Telegram
-    </a>
+  <div class="benefits">
+    <div class="benefit">✓ Работаем 24/7</div>
+    <div class="benefit">✓ Быстрая оценка</div>
+    <div class="benefit">✓ Любое состояние</div>
   </div>
 </section>
+
+<main class="form-wrap">
+  <div class="form-card">
+
+    <div id="formContent">
+
+      <div class="steps">
+        <div class="step-line active"></div>
+        <div class="step-line"></div>
+        <div class="step-line"></div>
+      </div>
+
+      <form id="applicationForm">
+
+        <!-- ШАГ 1 -->
+        <section class="form-step" data-step="0">
+          <h2 class="step-title">Ваш автомобиль</h2>
+          <p class="step-description">Укажите основные данные автомобиля</p>
+
+          <div class="field">
+            <label>Марка автомобиля *</label>
+            <input name="brand" placeholder="Например, Toyota" required>
+          </div>
+
+          <div class="field">
+            <label>Модель *</label>
+            <input name="model" placeholder="Например, Camry" required>
+          </div>
+
+          <div class="two-columns">
+            <div class="field">
+              <label>Год выпуска *</label>
+              <input name="year" type="number" min="1950" max="2027"
+                     placeholder="2018" required>
+            </div>
+
+            <div class="field">
+              <label>Город *</label>
+              <input name="city" placeholder="Москва" required>
+            </div>
+          </div>
+
+          <div class="field">
+            <label>Состояние автомобиля *</label>
+            <select name="condition" required>
+              <option value="">Выберите состояние</option>
+              <option value="На ходу">На ходу</option>
+              <option value="Не на ходу">Не на ходу</option>
+              <option value="После ДТП">После ДТП</option>
+              <option value="Требует ремонта">Требует ремонта</option>
+              <option value="Другое">Другое</option>
+            </select>
+          </div>
+
+          <div class="buttons">
+            <button type="button" class="btn-main next-btn">Продолжить</button>
+          </div>
+        </section>
+
+        <!-- ШАГ 2 -->
+        <section class="form-step hidden" data-step="1">
+          <h2 class="step-title">Подробнее об автомобиле</h2>
+          <p class="step-description">Дополнительная информация поможет оценить автомобиль</p>
+
+          <div class="two-columns">
+            <div class="field">
+              <label>Пробег, км</label>
+              <input name="mileage" type="number" placeholder="145000">
+            </div>
+
+            <div class="field">
+              <label>Желаемая цена, ₽</label>
+              <input name="price" type="number" placeholder="1800000">
+            </div>
+          </div>
+
+          <div class="field">
+            <label>Есть ли обременения? *</label>
+            <select name="encumbrance" required>
+              <option value="">Выберите вариант</option>
+              <option value="Нет">Нет</option>
+              <option value="Кредит">Кредит</option>
+              <option value="Залог">Залог</option>
+              <option value="Арест">Арест</option>
+              <option value="Другое">Другое</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label>Комментарий</label>
+            <textarea name="comment" placeholder="Дополнительная информация об автомобиле"></textarea>
+          </div>
+
+          <div class="field">
+            <label>Фотографии автомобиля</label>
+
+            <label class="photo-upload">
+              📷 Добавить фотографии
+              <span>До 5 фотографий. Желательно общий вид и повреждения</span>
+              <input id="photos" type="file" accept="image/*" multiple>
+            </label>
+
+            <div id="photoList" class="photo-list"></div>
+            <div class="photo-note" id="photoCount">Фотографии не выбраны</div>
+          </div>
+
+          <div class="buttons">
+            <button type="button" class="btn-back back-btn">Назад</button>
+            <button type="button" class="btn-main next-btn">Продолжить</button>
+          </div>
+        </section>
+
+        <!-- ШАГ 3 -->
+        <section class="form-step hidden" data-step="2">
+          <h2 class="step-title">Ваши контакты</h2>
+          <p class="step-description">Оставьте контактные данные для связи</p>
+
+          <div class="field">
+            <label>Ваше имя *</label>
+            <input name="name" placeholder="Как к вам обращаться?" required>
+          </div>
+
+          <div class="field">
+            <label>Номер телефона *</label>
+            <input name="phone" type="tel" placeholder="+7 (___) ___-__-__"
+                   required>
+          </div>
+
+          <label class="consent">
+            <input type="checkbox" name="consent" required>
+            <span>Я согласен на обработку персональных данных и принимаю условия обработки персональных данных.</span>
+          </label>
+
+          <div class="buttons">
+            <button type="button" class="btn-back back-btn">Назад</button>
+            <button type="submit" class="btn-main" id="submitBtn">Отправить заявку</button>
+          </div>
+        </section>
+
+      </form>
+    </div>
+
+    <div id="successMessage" class="success hidden">
+      <div class="success-icon">✓</div>
+      <h2>Заявка отправлена!</h2>
+      <p>Спасибо! Мы получили вашу заявку и свяжемся с вами в ближайшее время.</p>
+    </div>
+
+  </div>
+</main>
+
+<footer class="footer">
+  Автовыкуп 24/7 ·
+  <a href="https://t.me/dippi111" target="_blank" rel="noopener">Связаться в Telegram</a>
+</footer>
+
+<script>
+  const API_URL = 'https://autovykup-api.rch5s5j877.workers.dev';
+
+  const form = document.getElementById('applicationForm');
+  const steps = [...document.querySelectorAll('.form-step')];
+  const stepLines = [...document.querySelectorAll('.step-line')];
+  const photoInput = document.getElementById('photos');
+  const photoList = document.getElementById('photoList');
+  const photoCount = document.getElementById('photoCount');
+  const submitBtn = document.getElementById('submitBtn');
+
+  let currentStep = 0;
+  let selectedPhotos = [];
+
+  function showStep(index) {
+    currentStep = index;
+
+    steps.forEach((step, i) => {
+      step.classList.toggle('hidden', i !== index);
+    });
+
+    stepLines.forEach((line, i) => {
+      line.classList.toggle('active', i <= index);
+    });
+
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  function validateCurrentStep() {
+    const fields = [...steps[currentStep].querySelectorAll('[required]')];
+
+    for (const field of fields) {
+      if (!field.checkValidity()) {
+        field.reportValidity();
+        return false;
+      }
+    }
+
+    return true;
+  }
+
+  document.querySelectorAll('.next-btn').forEach(button => {
+    button.addEventListener('click', () => {
+      if (!validateCurrentStep()) return;
+      showStep(currentStep + 1);
+    });
+  });
+
+  document.querySelectorAll('.back-btn').forEach(button => {
+    button.addEventListener('click', () => {
+      showStep(currentStep - 1);
+    });
+  });
+
+  function renderPhotos() {
+    photoList.innerHTML = '';
+
+    selectedPhotos.forEach((file, index) => {
+      const item = document.createElement('div');
+      item.className = 'photo-item';
+
+      const img = document.createElement('img');
+      img.alt = 'Фотография автомобиля';
+
+      const remove = document.createElement('button');
+      remove.type = 'button';
+      remove.className = 'photo-remove';
+      remove.textContent = '×';
+      remove.addEventListener('click', () => {
+        selectedPhotos.splice(index, 1);
+        renderPhotos();
+      });
+
+      item.appendChild(img);
+      item.appendChild(remove);
+      photoList.appendChild(item);
+
+      const reader = new FileReader();
+      reader.onload = event => {
+        img.src = event.target.result;
+      };
+      reader.readAsDataURL(file);
+    });
+
+    photoCount.textContent = selectedPhotos.length
+      ? `Выбрано фотографий: ${selectedPhotos.length} из 5`
+      : 'Фотографии не выбраны';
+  }
+
+  photoInput.addEventListener('change', () => {
+    const files = [...photoInput.files];
+
+    for (const file of files) {
+      if (!file.type.startsWith('image/')) {
+        alert('Можно загружать только изображения.');
+        continue;
+      }
+
+      if (selectedPhotos.length >= 5) {
+        alert('Можно добавить не более 5 фотографий.');
+        break;
+      }
+
+      if (file.size > 8 * 1024 * 1024) {
+        alert(`Файл "${file.name}" больше 8 МБ. Выберите фотографию поменьше.`);
+        continue;
+      }
+
+      selectedPhotos.push(file);
+    }
+
+    photoInput.value = '';
+    renderPhotos();
+  });
+
+  async function compressImage(file) {
+    if (!file.type.startsWith('image/')) {
+      throw new Error('Неподдерживаемый формат фотографии');
+    }
+
+    const image = await new Promise((resolve, reject) => {
+      const img = new Image();
+      const url = URL.createObjectURL(file);
+
+      img.onload = () => {
+        URL.revokeObjectURL(url);
+        resolve(img);
+      };
+
+      img.onerror = () => {
+        URL.revokeObjectURL(url);
+        reject(new Error('Не удалось прочитать фотографию'));
+      };
+
+      img.src = url;
+    });
+
+    const maxSide = 1600;
+    const scale = Math.min(1, maxSide / Math.max(image.width, image.height));
+
+    const canvas = document.createElement('canvas');
+    canvas.width = Math.round(image.width * scale);
+    canvas.height = Math.round(image.height * scale);
+
+    const ctx = canvas.getContext('2d');
+    ctx.drawImage(image, 0, 0, canvas.width, canvas.height);
+
+    const blob = await new Promise(resolve => {
+      canvas.toBlob(resolve, 'image/jpeg', 0.82);
+    });
+
+    if (!blob) {
+      throw new Error('Не удалось обработать фотографию');
+    }
+
+    return new File(
+      [blob],
+      `photo-${Date.now()}-${Math.random().toString(16).slice(2)}.jpg`,
+      { type: 'image/jpeg' }
+    );
+  }
+
+  form.addEventListener('submit', async event => {
+    event.preventDefault();
+
+    if (!validateCurrentStep()) return;
+
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Отправляем...';
+
+    try {
+      const formData = new FormData(form);
+
+      formData.delete('consent');
+      formData.delete('photos');
+
+      for (let i = 0; i < selectedPhotos.length; i++) {
+        const compressed = await compressImage(selectedPhotos[i]);
+        formData.append('photos', compressed, compressed.name);
+      }
+
+      const response = await fetch(API_URL, {
+        method: 'POST',
+        body: formData
+      });
+
+      const result = await response.json().catch(() => ({}));
+
+      if (!response.ok || !result.success) {
+        throw new Error(result.error || 'Не удалось отправить заявку');
+      }
+
+      if (typeof ym === 'function') {
+        ym(114397144, 'reachGoal', 'lead_sent');
+      }
+
+      document.getElementById('formContent').classList.add('hidden');
+      document.getElementById('successMessage').classList.remove('hidden');
+
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+
+    } catch (error) {
+      console.error('Ошибка отправки:', error);
+      alert(error.message || 'Ошибка отправки. Попробуйте ещё раз.');
+
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Отправить заявку';
+    }
+  });
+</script>
+
 </body>
 </html>
