@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -71,9 +72,7 @@
       font-weight: bold;
     }
 
-    .phone {
-      font-weight: bold;
-    }
+    .phone { font-weight: bold; }
 
     .hero {
       max-width: 1100px;
@@ -348,30 +347,17 @@
     .footer a { color: #ff653b; }
 
     @media (max-width: 600px) {
-      .header {
-        padding: 18px 16px;
-      }
-
+      .header { padding: 18px 16px; }
       .logo { font-size: 19px; }
-
       .header-right { gap: 10px; }
-
       .phone { font-size: 12px; }
-
       .work-time { font-size: 12px; }
-
       .hero { padding: 45px 18px 25px; }
-
       .hero p { font-size: 15px; }
-
       .form-card { padding: 22px 17px; }
-
       .two-columns { grid-template-columns: 1fr; gap: 0; }
-
       .photo-list { grid-template-columns: repeat(3, 1fr); }
-
       .buttons { flex-direction: column-reverse; }
-
       .btn-back { width: 100%; }
     }
   </style>
@@ -624,6 +610,7 @@
       remove.type = 'button';
       remove.className = 'photo-remove';
       remove.textContent = '×';
+
       remove.addEventListener('click', () => {
         selectedPhotos.splice(index, 1);
         renderPhotos();
@@ -634,9 +621,11 @@
       photoList.appendChild(item);
 
       const reader = new FileReader();
+
       reader.onload = event => {
         img.src = event.target.result;
       };
+
       reader.readAsDataURL(file);
     });
 
@@ -694,7 +683,10 @@
     });
 
     const maxSide = 1600;
-    const scale = Math.min(1, maxSide / Math.max(image.width, image.height));
+    const scale = Math.min(
+      1,
+      maxSide / Math.max(image.width, image.height)
+    );
 
     const canvas = document.createElement('canvas');
     canvas.width = Math.round(image.width * scale);
@@ -718,6 +710,7 @@
     );
   }
 
+  // Отправка заявки
   form.addEventListener('submit', async event => {
     event.preventDefault();
 
@@ -734,7 +727,12 @@
 
       for (let i = 0; i < selectedPhotos.length; i++) {
         const compressed = await compressImage(selectedPhotos[i]);
-        formData.append('photos', compressed, compressed.name);
+
+        formData.append(
+          'photos',
+          compressed,
+          compressed.name
+        );
       }
 
       const response = await fetch(API_URL, {
@@ -742,12 +740,27 @@
         body: formData
       });
 
-      const result = await response.json().catch(() => ({}));
+      // Получаем полный ответ сервера
+      const responseText = await response.text();
 
-      if (!response.ok || !result.success) {
-        throw new Error(result.error || 'Не удалось отправить заявку');
+      let result;
+
+      try {
+        result = JSON.parse(responseText);
+      } catch {
+        throw new Error(
+          `Сервер вернул некорректный ответ. HTTP ${response.status}: ${responseText.slice(0, 300)}`
+        );
       }
 
+      // Показываем подробную причину ошибки
+      if (!response.ok || !result.success) {
+        throw new Error(
+          `${result.details || result.error || 'Не удалось отправить заявку'} (HTTP ${response.status})`
+        );
+      }
+
+      // Цель Яндекс Метрики
       if (typeof ym === 'function') {
         ym(114397144, 'reachGoal', 'lead_sent');
       }
@@ -759,7 +772,10 @@
 
     } catch (error) {
       console.error('Ошибка отправки:', error);
-      alert(error.message || 'Ошибка отправки. Попробуйте ещё раз.');
+
+      alert(
+        error.message || 'Ошибка отправки. Попробуйте ещё раз.'
+      );
 
       submitBtn.disabled = false;
       submitBtn.textContent = 'Отправить заявку';
